@@ -4,11 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brandon Melvin Herrin">
-    <meta name="description" content="Landing page for Website for BYU-Pathway class 231.">
+    <meta name="description" content="Landing page for BYU-Pathway class 231.">
     <title>WDD 231</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-    <h1>WDD 231</h1>
-    <p>Landing page.</p>
+    <header>
+        <img src="images/75-Header-Profile.webp" class="header-img" alt="Brandon Herrin Portrait">
+        <h1>Brandon M. Herrin</h1>
+        <button id="nav-toggle">&#9776</button>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">Chamber</a>
+        <a href="index.html">Github Profile</a>
+        <a href="index.html">LinkedIn</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Salina, Utah</h2>
+            <figure>
+                <img src="images/150-Salina-City.webp" id="salina-city" alt="Salina City Building">
+                <figcaption>Salina City Building</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="courses-toolbar">
+                <button onclick="loadCourseItems()">All</button>
+                <button onclick="loadCseCourses()">CSE</button>
+                <button onclick="loadWddCourses()">WDD</button>
+            </div>
+            <ul class="course-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="copy-year"></span> Brandon Melvin Herrin USA <img class="footer-flag"></p>
+        <p>Last Update: <span id="last-update"></span></p>
+    </footer>
 </body>
 </html>
