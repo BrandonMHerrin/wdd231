@@ -1,0 +1,40 @@
+[
+    {
+        "familyName":"Herrin",
+        "movedIn":"2023-12-09",
+        "householdCount": 6,
+        "bishopricVisit": false,
+        "familyMembers": [
+            {
+                "name": "Brandon",
+                "gender": "Male",
+                "birthdate": "1990-03-02"
+            },
+            {
+                "name": "Jessica",
+                "gender": "Female",
+                "birthdate": "1983-12-25"
+            },
+            {
+                "name": "Jayna",
+                "gender": "Female",
+                "birthdate": "2019-12-09"
+            },
+            {
+                "name": "Jeno",
+                "gender": "Male",
+                "birthdate": "2019-12-09"
+            },
+            {
+                "name": "Malachi",
+                "gender": "Male",
+                "birthdate": "2021-12-06"
+            },
+            {
+                "name": "Moroni",
+                "gender": "Male",
+                "birthdate": "2023-07-27"
+            }
+        ]
+    }
+]
