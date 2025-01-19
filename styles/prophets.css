@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary: #B0BBBF;
+    --secondary: #E2D4B7;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--primary);
+    padding: 1rem;
+    color: var(--black);
+}
+
+main {
+    box-shadow: 0 0 10px var(--black);
+    padding: 1rem;
+}
+
+#cards {
+    display: grid;
+    gap: 1rem;
+}
+
+section {
+    background-color: var(--secondary);
+    padding: 1rem;
+}
+
+section img {
+    max-width: 250px;
+    height: auto;
+}
+
+@media screen AND (min-width: 600px) {
+    #cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
