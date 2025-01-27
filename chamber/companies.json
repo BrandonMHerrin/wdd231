@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Barney Trucking",
+        "address": {
+            "street": "235 South SR 24",
+            "city": "Salina",
+            "state": "Utah",
+            "zip": "94654"
+        },
+        "phone": "(435)529-3701",
+        "website": "https://www.barneytrucking.com",
+        "image": "images/barneytrucking.webp",
+        "membershipLevel": "Gold"
+    },
+    {
+      "name": "Robinson Transport",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(435)529-7472",
+      "website": "https://www.facebook.com/p/Robinson-Transport-Inc-100083505011062/",
+      "image": "images/robinson.webp",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Moms Cafe",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(435)529-3921",
+      "website": "https://www.facebook.com/momscafesalina/",
+      "image": "images/momscafe.webp",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Rasmussen Excavation",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(435)201-1699",
+      "website": "https://www.facebook.com/p/Rasmussen-Excavation-Utah-100063606101574/",
+      "image": "images/rasmussen.webp",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "The Hot Spot Drive In",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(435)529-3681",
+      "website": "https://www.facebook.com/hotspotsalina/",
+      "image": "images/hotspot.webp",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Loves Fuel Stop",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(435)287-0460",
+      "website": "https://www.loves.com",
+      "image": "images/loves.webp",
+      "membershipLevel": "Bronze"
+    },
+    {
+      "name": "Maverick",
+      "address": {
+        "street": "235 South SR 24",
+        "city": "Salina",
+        "state": "Utah",
+        "zip": "94654"
+      },
+      "phone": "(385)401-4810",
+      "website": "https://www.maverik.com",
+      "image": "images/maverik.webp",
+      "membershipLevel": "Bronze"
+    }
+]

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary: rgb(184, 33, 50);
+    --secondary: rgb(210, 102, 90);
+    --tertiary: rgb(242, 178, 140);
+    --quaternary: rgb(246, 222, 216);
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    box-sizing: border-box;
+}
+
+header {
+    /* background-color: rgba(0, 0, 0, .7); */
+    background-color: var(--primary);
+    color: #fff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.header-text {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+
+header .logo {
+    background-color: var(--black);
+    height: 50px;
+    width: 50px;
+}
+
+header .smaller-text {
+    font-size: 1rem;
+}
+
+.header-text-column {
+    display: grid;
+}
+
+nav.main-nav {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.main-nav button {
+    height: 45px;
+    width: 45px;
+    font-size: 1.3rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.main-nav ul {
+    display: none;
+}
+
+.nav-container {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.nav-container.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.nav-container .nav-list {
+    display: grid;
+    padding: 1rem;
+    gap: .5rem;
+    list-style: none;
+}
+
+.nav-container .nav-list li a.current-page {
+    background-color: var(--tertiary);
+}
+
+.nav-container .nav-list li a {
+    background-color: var(--white);
+    color: #000;
+    text-align: center;
+    display: block;
+    padding: .7rem;
+    text-decoration: none;
+}
+
+main {
+    min-height: 200px;
+}
+
+footer {
+    background-color: var(--primary);
+    padding: 1rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+footer .container {
+    max-width: 600px;
+    margin: auto;
+}
+
+footer .larger-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+footer .social-card {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social-logo {
+    margin: 1.5rem 0;
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+@media screen AND (min-width: 600px) {
+    .main-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    .main-nav a {
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--white);
+    }
+    .main-nav button {
+        display: none;
+    }
+}
