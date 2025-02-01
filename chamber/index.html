@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salina City Chamber | Directory</title>
+    <title>Salina City Chamber | Home</title>
     <meta name="author" content="Brandon Melvin Herrin">
-    <meta name="description" content="Directory page for the Salina City Chamber of Commerce Website">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <meta name="description" content="Home page for the Salina City Chamber of Commerce Website. Fictional website for the Salina City Chamber of Commerce. This site is for an assigment for WDD231 from BYU-Pathway. Conent is fictional and used for educational purposes.">
+    <meta property="og:title" content="Salina City Chamber of Commerce WDD231 Assignment BYU-Pathway">
+    <meta property="og:description" content="Fictional website for the Salina City Chamber of Commerce. This site is for an assigment for WDD231 from BYU-Pathway. Conent is fictional and used for educational purposes.">
+    <meta property="og:image" content="https://brandonmherrin.github.io/wdd231/chamber/images/salinachamber-thumbnail.png">
+    <meta property="og:url" content="https://brandonmherrin.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles/normalize.css" media="all">
+    <link rel="stylesheet" href="styles/main.css" media="all">
+    <link rel="stylesheet" href="styles/index.css" media="all">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/main.mjs" type="module"></script>
+    <script src="scripts/index.mjs" type="module"></script>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="header-text">
-                <img src="#" alt="Salina City Chamber of Commerce Logo" class="logo">
+                <img src="images/salinachamber.webp" alt="Salina City Chamber of Commerce Logo" class="logo">
                 <!-- <div src="#" alt="Salina City Chamber of Commerce Logo" class="logo"></div> -->
                 <h1 class="header-text-column">
                     <span class="larger-text">Salina City</span>
@@ -25,48 +31,116 @@
             </div>
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a>Home</a></li>
-                    <li><a class="current-page">Directory</a></li>
-                    <li><a>Join</a></li>
-                    <li><a>Discover</a></li>
+                    <li><a href="index.html" class="current-page">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="directory.html">Join</a></li>
+                    <li><a href="directory.html">Discover</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-toggle">&#9728;</button>
                 <button id="menu-toggle" class="menu-toggle">&#9776;</button>
             </nav>
         </div>
         <nav class="nav-container">
             <ul class="nav-list">
-                <li><a>Home</a></li>
-                <li><a class="current-page">Directory</a></li>
-                <li><a>Join</a></li>
-                <li><a>Discover</a></li>
+                <li><a href="index.html" class="current-page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Join</a></li>
+                <li><a href="directory.html">Discover</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="call-to-action">
+            <h2>Join Today</h2>
+            <p>Are you new to the area, or want to get active in the local chamber? </p>
+            <a href="index.html">Join</a>
+        </section>
+        <div class="content-wrapper">
+            <section class="jumbotron">
+                <picture>
+                    <source srcset="images/jumbotron-large.webp" media="(min-width: 1200px)">
+                    <source srcset="images/jumbotron-medium.webp" media="(min-width: 900px)">
+                    <source srcset="images/jumbotron-small.webp" media="(min-width: 60000px)">
+                    <img src="images/jumbotron-extra-small.webp" alt="Welcome to Salina City Chamber of Commerce Page" class="responsive-image">
+                </picture>
+            </section>
+            <section class="current-events">
+                <h2 class="section-header">Current Events</h2>
+                <article class="card">
+                    <h3>Eyes to the Sky Balloon Festival</h3>
+                    <p>
+                        Come out and enjoy the annual Eyes to the Sky Balloon Festival.
+                        Bring your family and friends and be sure to visit local    chamber members. <br>
+                        <span class="event-date">June, 18-20 2025</span>
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Blast from the Past Car Show</h3>
+                    <p>
+                        Do you love classic cars and nice weather? Come out for the salina city annual Blast From the Past Car Show.<br>
+                        <span class="event-date">July, 19-21 2025</span>
+                    </p>
+                </article>
+            </section>
+            <section class="weather">
+                <h2 class="section-header">Weather</h2>
+                <article class="card">
+                    <div>
+                        <h3>Current Conditions</h3>
+                        <p>
+                            <span class="large-text"><span class="temp"></span>&deg;F</span><br>
+                            <span class="conditions"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>3-Day Forecast</h3>
+                        <div class="forecast-wrapper">
+                            <div class="today">
+                                <h4 class="forecast-date">Today</h4>
+                                <p><span class="temp"></span>&deg;F</p>
+                            </div>
+                            <div class="tomorrow">
+                                <h4 class="forecast-date"></h4>
+                                <p><span class="temp"></span>&deg;F</p>
+                            </div>
+                            <div class="day-after">
+                                <h4 class="forecast-date"></h4>
+                                <p><span class="temp"></span>&deg;F</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="company-spotlight">
+                <h2 class="section-header">Member Spotlight</h2>
+                <div class="companies-wrapper">
 
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
-        <p class="contact-card" >
-            <span class="larger-text">
-                Salina City Chamber of Commerce
-            </span><br>
-            138 East Main Street <br>
-            Salina, Utah 84654 <br>
-            info@salinacc.org <br>
-            (435)111-1111
-        </p>
-        <div class="social-card">
-            <a><img src="#" alt="Youtube Logo" class="social-logo"></a>
-            <a><img src="#" alt="X Logo" class="social-logo"></a>
-            <a><img src="#" alt="LinkedIn Logo" class="social-logo"></a>
+        <div class="container">
+            <p class="contact-card" >
+                <span class="larger-text">
+                    Salina City Chamber of Commerce
+                </span><br>
+                138 East Main Street <br>
+                Salina, Utah 84654 <br>
+                info@salinacc.org <br>
+                (435)111-1111
+            </p>
+            <div class="social-card">
+                <a href="https://www.youtube.com"><img src="images/yt_icon_rgb-40.webp" alt="Youtube Logo" class="social-logo"></a>
+                <a href="https://www.x.com"><img src="images/x-logo-white-40.webp" alt="X Logo" class="social-logo"></a>
+                <a href="https://www.linkedin.com"><img src="images/LI-In-Bug-S60.webp  " alt="LinkedIn Logo" class="social-logo"></a>
+            </div>
+            <p class="developement-card">
+                WDD231 Class Project <br>
+                Brandon Melvin Herrin <br>
+                &copy;<span class="current-year"></span> Salina City Chamber of Commerce<br>
+                Last Modification: <span id="last-modification"></span>
+            </p>
         </div>
-        <p class="developement-card">
-            WDD231 Class Project <br>
-            Brandon Melvin Herrin <br>
-            &copy;<span class="current-year"></span> Salina City Chamber of Commerce<br>
-            Last Modification: <span id="last-modification"></span>
-        </p>
     </footer>
 </body>
 </html>

@@ -63,6 +63,12 @@ nav.main-nav {
     gap: .5rem;
 }
 
+nav.main-nav a.current-page {
+    background-color: rgba(0, 0, 0, .6);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
 .main-nav button {
     height: 45px;
     width: 45px;
@@ -122,6 +128,7 @@ footer {
 footer .container {
     max-width: 600px;
     margin: auto;
+    display: grid;
 }
 
 footer .larger-text {
@@ -157,5 +164,15 @@ footer .social-logo {
     }
     .main-nav button {
         display: none;
+    }
+}
+
+@media screen AND (min-width: 900px) {
+    footer .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    footer .developement-card {
+        grid-column: span 2;
     }
 }
