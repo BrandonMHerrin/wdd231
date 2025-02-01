@@ -21,7 +21,6 @@ class WeatherModule {
   async updateForecastCard() {
     const forecasts = await this.loadForcast();
     this.updateForecastDates(forecasts);
-    console.log(forecasts);
   }
   updateForecastDates(forecasts) {
     const todaysForecast = forecasts[0];
