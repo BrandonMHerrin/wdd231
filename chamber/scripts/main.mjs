@@ -1,5 +1,5 @@
 import HeaderModule from "./header.mjs";
-import FooterModule from "./Footer.mjs";
+import FooterModule from "./footer.mjs";
 
 class Page {
   constructor() {
