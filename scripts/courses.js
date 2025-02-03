@@ -70,8 +70,9 @@ const courses = [
 let creditCount = 0;
 
 const creditCountSpan = document.querySelector('#course-credits');
-
 const listElement = document.querySelector(".course-list");
+const courseDialog = document.querySelector(".course-details");
+const closeCourseButton = document.querySelector('#close-course-modal');
 
 function buildCourseElement(course) {
   const listItem = document.createElement('li');
@@ -80,23 +81,27 @@ function buildCourseElement(course) {
     button.classList.add('completed')
   }
   button.textContent = course.subject + course.number;
-
+  button.dataset.number = course.number;
+  button.dataset.subject = course.subject;
   listItem.append(button);
   return listItem;
 }
 
 function loadCourseItems() {
   clearList();
+  clearActiveToolbarOption();
   resetCreditCount();
   courses.forEach((course) => {
     listElement.appendChild(buildCourseElement(course));
     creditCount += course.credits;
   })
   displayCreditCount();
+  document.querySelector('#all').classList.add('active');
 }
 
 function loadCseCourses() {
   clearList();
+  clearActiveToolbarOption();
   resetCreditCount();
   courses.forEach((course) => {
     if (course.subject === 'CSE') {
@@ -105,10 +110,12 @@ function loadCseCourses() {
     }
   });
   displayCreditCount();
+  document.querySelector('#cse').classList.add('active');
 }
 
 function loadWddCourses() {
   clearList();
+  clearActiveToolbarOption();
   resetCreditCount();
   courses.forEach((course) => {
     if (course.subject === 'WDD') {
@@ -117,6 +124,14 @@ function loadWddCourses() {
     }
   });
   displayCreditCount();
+  document.querySelector('#wdd').classList.add('active');
+}
+
+function clearActiveToolbarOption () {
+  const className = 'active';
+  document.querySelector('#all').classList.remove(className);
+  document.querySelector('#cse').classList.remove(className);
+  document.querySelector('#wdd').classList.remove(className);
 }
 
 function displayCreditCount() {
@@ -131,8 +146,43 @@ function resetCreditCount() {
   creditCount = 0;
 }
 
+function registerListItemEventListener() {
+  listElement.addEventListener('click', handleListItemClickEvent)
+}
+
+function handleListItemClickEvent(event) {
+  if (event.target.tagName === 'BUTTON') {
+    const subject = event.target.dataset.subject;
+    const number = parseInt(event.target.dataset.number);
+    setCourseDetails(subject, number);
+    courseDialog.showModal();
+  }
+}
+
+function closeCourseModal() {
+  courseDialog.close();
+}
+
+function registerEventListeners() {
+  closeCourseButton.addEventListener('click', closeCourseModal);
+  registerListItemEventListener();
+}
+
+function setCourseDetails(subject, number) {
+  const course = courses.filter((item) => 
+    item.subject === subject && item.number === number)[0];
+  document.querySelector('.course-details h2').textContent = `
+    ${course.title} | ${course.subject}${course.number}
+  `;
+  document.querySelector('dialog .credits').textContent = course.credits;
+  document.querySelector('dialog .certificate').textContent = course.certificate;
+  document.querySelector('dialog .description').textContent = course.description;
+  document.querySelector('dialog .technologies').textContent = course.technology.join(', ');
+}
+
 function app() {
   loadCourseItems();
+  registerEventListeners();
 }
 
 app();

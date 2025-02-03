@@ -26,8 +26,8 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="index.html">Chamber</a>
-        <a href="index.html">Github Profile</a>
+        <a href="chamber/index.html">Chamber</a>
+        <a href="https://github.com/BrandonMHerrin">Github Profile</a>
         <a href="index.html">LinkedIn</a>
     </nav>
     <main>
@@ -49,9 +49,9 @@
         <section>
             <h2>Web and Computer Programming Certificate</h2>
             <div class="courses-toolbar">
-                <button onclick="loadCourseItems()">All</button>
-                <button onclick="loadCseCourses()">CSE</button>
-                <button onclick="loadWddCourses()">WDD</button>
+                <button onclick="loadCourseItems()" id="all">All</button>
+                <button onclick="loadCseCourses()" id="cse">CSE</button>
+                <button onclick="loadWddCourses()" id="wdd">WDD</button>
             </div>
             <p class="center-text">Credits required for courses displayed: <span id="course-credits"></span></p>
             <ul class="course-list"></ul>
@@ -61,5 +61,17 @@
         <p>&copy;<span id="copy-year"></span> Brandon Melvin Herrin USA</p>
         <p>Last Update: <span id="last-update"></span></p>
     </footer>
+    <dialog class="course-details">
+        <header>
+            <h2></h2>
+            <button id="close-course-modal">&times;</button>
+        </header>
+        <div>
+            <p><strong>Credits: </strong><span class="credits"></span></p>
+            <p><strong>Certificate: </strong><span class="certificate"></span></p>
+            <p class="description"></p>
+            <p><strong>Technologies: </strong><span class="technologies"></span></p>
+        </div>
+    </dialog>
 </body>
 </html>

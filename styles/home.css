@@ -24,6 +24,12 @@ figcaption {
     background-color: var(--black);
     color: var(--white);
     border-radius: .25rem;
+    border: none;
+    transition: background-color 500ms ease;
+}
+
+.courses-toolbar button.active {
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .course-list {
@@ -50,6 +56,14 @@ figcaption {
 .course-list li button.completed {
     background-color: var(--tertiary-color);
     color: var(--white);
+}
+
+dialog {
+    max-width: 600px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, .8);
 }
 
 @media screen and (min-width: 600px) {
