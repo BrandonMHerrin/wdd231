@@ -1,0 +1,165 @@
+.main-content {
+    display: grid;
+}
+
+main {
+    /* margin: 1rem 0 2rem; */
+    padding: 1rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .8) ;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+form {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap:  1rem;
+}
+
+h2 {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+}
+
+input[type="submit"] {
+    color: var(--primary);
+    background: none;
+    border: 2px solid var(--primary);
+    /* padding: .75rem; */
+    display: inline;
+    border-radius: 1rem;
+}
+
+input[type="submit"][disabled] {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.required {
+    color: var(--primary);
+}
+
+aside {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+aside h3 {
+    border: 2px solid var(--primary);
+    padding: .25rem;
+    margin-bottom: 1rem;
+}
+
+aside button {
+    background: none;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 1rem;
+    border: none;
+    padding: .75rem;
+    margin-top: 1rem;
+}
+
+aside button:hover {
+    cursor: pointer;
+}
+
+aside article {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--quaternary);
+    border-radius: 1rem;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: fadeDown 700ms forwards;
+}
+
+article#item1 {
+    animation-delay: 0s;
+}
+article#item2 {
+    animation-delay: .25s;
+}
+article#item3 {
+    animation-delay: .5s;
+}
+article#item4 {
+    animation-delay: .75s;
+}
+
+
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+dialog {
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+dialog header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+dialog button {
+    background: none;
+    border: 2px solid var(--white);
+    color: var(--white);
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.message {
+    color: var(--primary);
+}
+
+dialog div {
+    padding: 0 1rem 1rem;
+}
+
+@media screen AND (min-width: 600px) {
+    dialog {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen AND (min-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr 40%;
+        max-width: 960px;
+        margin: auto;
+    }
+    aside {
+        height: auto;
+        align-self: self-start;
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salina City Chamber | Thank You</title>
+    <meta name="author" content="Brandon Melvin Herrin" />
+    <meta
+      name="description"
+      content="Thank you page for the Salina City Chamber of Commerce Website. Fictional website for the Salina City Chamber of Commerce. This site is for an assigment for WDD231 from BYU-Pathway. Conent is fictional and used for educational purposes."
+    />
+    <meta
+      property="og:title"
+      content="Salina City Chamber of Commerce WDD231 Assignment BYU-Pathway"
+    />
+    <meta
+      property="og:description"
+      content="Fictional website for the Salina City Chamber of Commerce. This site is for an assigment for WDD231 from BYU-Pathway. Conent is fictional and used for educational purposes."
+    />
+    <meta
+      property="og:image"
+      content="https://brandonmherrin.github.io/wdd231/chamber/images/salinachamber-thumbnail.png"
+    />
+    <meta
+      property="og:url"
+      content="https://brandonmherrin.github.io/wdd231/chamber/join.html"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles/normalize.css" media="all" />
+    <link rel="stylesheet" href="styles/main.css" media="all" />
+    <link rel="stylesheet" href="styles/join.css" media="all" />
+    <link rel="icon" href="favicon.ico" />
+    <script src="scripts/main.mjs" type="module"></script>
+    <script src="scripts/join.mjs" type="module"></script>
+    <script src="scripts/thankyou.mjs" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-text">
+          <img
+            src="images/salinachamber.webp"
+            alt="Salina City Chamber of Commerce Logo"
+            class="logo"
+          />
+          <!-- <div src="#" alt="Salina City Chamber of Commerce Logo" class="logo"></div> -->
+          <h1 class="header-text-column">
+            <span class="larger-text">Salina City</span>
+            <span class="smaller-text">Chamber of Commerce</span>
+          </h1>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+          </ul>
+          <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+        </nav>
+      </div>
+      <nav class="nav-container">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-content">
+        <main>
+          <form method="get" action="thankyou.html" class="card" id="join-form">
+            <h2>Thank You!</h2>
+            <p class="message">Thank you for your interest in joining the chamber. Your request has been received.</p>
+            <label
+              >First Name<span class="required">*</span><input
+                type="text"
+                name="first"
+                id="first"
+                autocomplete="given-name"
+                disabled
+                title="Enter your first name"
+            /></label>
+            <label
+              >Last Name<span class="required">*</span><input
+                type="text"
+                name="last"
+                id="last"
+                autocomplete="family-name"
+                disabled
+                title="Enter your last name"
+            /></label>
+            <label
+              >Title
+              <input
+                type="text"
+                name="title"
+                id="title"
+                pattern="[A-Za-z\s-]{7,}"
+                autocomplete="organization-title"
+                title="Enter you organization title"
+                disabled
+            /></label>
+            <label
+              >Email<span class="required">*</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                disabled
+                autocomplete="email"
+                placeholder="example@gmail.com"
+                title="Enter your email address"
+            /></label>
+            <label
+              >Phone<span class="required">*</span>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                disabled
+                autocomplete="tel"
+                title="Enter your mobile number"
+            /></label>
+            <label
+              >Business/Organization Name<span class="required">*</span>
+              <input
+                type="text"
+                disabled
+                name="business"
+                id="business"
+                autocomplete="organization"
+                title="Enter your business/organization name"
+            /></label>
+            <label>
+              Membership Level<span class="required">*</span>
+              <select name="membership" id="membership" autocomplete="off" disabled>
+                <option value="" selected disabled>
+                  Select a membership level
+                </option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="bronze">Bronze</option>
+                <option value="np">Non Prophet</option>
+              </select>
+            </label>
+            <label
+              >Business Description:
+              <textarea
+                name="description"
+                id="description"
+                autocomplete="off"
+                title="Enter a description of your business/organization"
+                rows="5"
+                disabled
+              ></textarea>
+            </label>
+            <p id="timestamp"></p>
+            <!-- <input type="submit" value="Join" disabled/> -->
+          </form>
+        </main>
+        <aside class="card">
+            <h2>Membership Levels</h2>
+            <article>
+                <h3>Gold</h3>
+                <p>
+                    Our premium level package for members offering great
+                    marketing attention and spotlight.
+                </p>
+                <button data-membership-level="gold">Details</button>
+            </article>
+            <article>
+                <h3>Silver</h3>
+                <p>
+                    Our mid-level package with great benefits and advertising for members
+                </p>
+                <button data-membership-level="silver">Details</button>
+            </article>
+            <article>
+                <h3>Bronze</h3>
+                <p>
+                    Our entry-level package with great feature for members of our chamber
+                </p>
+                <button data-membership-level="bronze">Details</button>
+            </article>
+            <article>
+                <h3>Non Profit</h3>
+                <p>
+                    A great package for non-prophet organizations to participate in our chamber
+                </p>
+                <button data-membership-level="np">Details</button>
+            </article>
+        </aside>
+    </div>
+    <footer>
+      <div class="container">
+        <p class="contact-card">
+          <span class="larger-text"> Salina City Chamber of Commerce </span
+          ><br />
+          138 East Main Street <br />
+          Salina, Utah 84654 <br />
+          info@salinacc.org <br />
+          (435)111-1111
+        </p>
+        <div class="social-card">
+          <a href="https://www.youtube.com"
+            ><img
+              src="images/yt_icon_rgb-40.webp"
+              alt="Youtube Logo"
+              class="social-logo"
+          /></a>
+          <a href="https://www.x.com"
+            ><img
+              src="images/x-logo-white-40.webp"
+              alt="X Logo"
+              class="social-logo"
+          /></a>
+          <a href="https://www.linkedin.com"
+            ><img
+              src="images/LI-In-Bug-S60.webp  "
+              alt="LinkedIn Logo"
+              class="social-logo"
+          /></a>
+        </div>
+        <p class="developement-card">
+          WDD231 Class Project <br />
+          Brandon Melvin Herrin <br />
+          &copy;<span class="current-year"></span> Salina City Chamber of
+          Commerce<br />
+          Last Modification: <span id="last-modification"></span>
+        </p>
+      </div>
+    </footer>
+    <dialog>
+        <header>
+            <h2 id="modal-title"></h2>
+            <button id="close-modal">&times;</button>
+        </header>
+        <div>
+          <h3>Description</h3>
+          <br>
+          <p id="modal-description"></p>
+          <br>
+          <p><strong>Cost: </strong>$<span id="modal-cost"></span></p>
+        </div>
+    </dialog>
+  </body>
+</html>

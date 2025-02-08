@@ -1,0 +1,26 @@
+[
+  {
+    "level": "np",
+    "title": "Non Profit",
+    "description": "A great package for non-prophet organizations to participate in our chamber.",
+    "cost": 0
+  },
+  {
+    "level": "bronze",
+    "title": "Bronze",
+    "description": "Our entry-level package with great feature for members of our chamber.",
+    "cost": 4000
+  },
+  {
+    "level": "silver",
+    "title": "Silver",
+    "description": "Our mid-level package with great benefits and advertising for members.",
+    "cost": 6000
+  },
+  {
+    "level": "gold",
+    "title": "Gold",
+    "description": "Our premium level package for members offering great marketing attention and spotlight.",
+    "cost": 8000
+  }
+]
