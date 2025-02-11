@@ -68,125 +68,135 @@
       </nav>
     </header>
     <div class="main-content">
-        <main>
-          <form method="get" action="thankyou.html" class="card" id="join-form">
-            <h2>Join Today!</h2>
-            <label
-              >First Name<span class="required">*</span><input
-                type="text"
-                name="first"
-                id="first"
-                autocomplete="given-name"
-                required
-                title="Enter your first name"
-            /></label>
-            <label
-              >Last Name<span class="required">*</span><input
-                type="text"
-                name="last"
-                id="last"
-                autocomplete="family-name"
-                required
-                title="Enter your last name"
-            /></label>
-            <label
-              >Title
-              <input
-                type="text"
-                name="title"
-                id="title"
-                pattern="[A-Za-z\s-]{7,}"
-                autocomplete="organization-title"
-                title="Enter you organization title"
-            /></label>
-            <label
-              >Email<span class="required">*</span>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                autocomplete="email"
-                placeholder="example@gmail.com"
-                title="Enter your email address"
-            /></label>
-            <label
-              >Phone<span class="required">*</span>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                required
-                autocomplete="tel"
-                title="Enter your mobile number"
-            /></label>
-            <label
-              >Business/Organization Name<span class="required">*</span>
-              <input
-                type="text"
-                required
-                name="business"
-                autocomplete="organization"
-                title="Enter your business/organization name"
-            /></label>
-            <label>
-              Membership Level<span class="required">*</span>
-              <select name="membership" id="membership" autocomplete="off" required>
-                <option value="" selected disabled>
-                  Select a membership level
-                </option>
-                <option value="gold">Gold</option>
-                <option value="silver">Silver</option>
-                <option value="bronze">Bronze</option>
-                <option value="np">Non Prophet</option>
-              </select>
-            </label>
-            <label
-              >Business Description:
-              <textarea
-                name="description"
-                id="description"
-                autocomplete="off"
-                title="Enter a description of your business/organization"
-                rows="5"
-              ></textarea>
-            </label>
-            <input type="hidden" name="timestamp" id="timestamp" />
-            <input type="submit" id="submit" value="Join" />
-          </form>
-        </main>
-        <aside class="card">
-            <h2>Membership Levels</h2>
-            <article id="item1">
-                <h3>Gold</h3>
-                <p>
-                    Our premium level package for members offering great
-                    marketing attention and spotlight.
-                </p>
-                <button data-membership-level="gold">Details</button>
-            </article>
-            <article id="item2">
-                <h3>Silver</h3>
-                <p>
-                    Our mid-level package with great benefits and advertising for members
-                </p>
-                <button data-membership-level="silver">Details</button>
-            </article>
-            <article id="item3">
-                <h3>Bronze</h3>
-                <p>
-                    Our entry-level package with great feature for members of our chamber
-                </p>
-                <button data-membership-level="bronze">Details</button>
-            </article>
-            <article id="item4">
-                <h3>Non Profit</h3>
-                <p>
-                    A great package for non-prophet organizations to participate in our chamber
-                </p>
-                <button data-membership-level="np">Details</button>
-            </article>
-        </aside>
+      <main>
+        <form method="get" action="thankyou.html" class="card" id="join-form">
+          <h2>Join Today!</h2>
+          <label
+            >First Name<span class="required">*</span
+            ><input
+              type="text"
+              name="first"
+              id="first"
+              autocomplete="given-name"
+              required
+              title="Enter your first name"
+          /></label>
+          <label
+            >Last Name<span class="required">*</span
+            ><input
+              type="text"
+              name="last"
+              id="last"
+              autocomplete="family-name"
+              required
+              title="Enter your last name"
+          /></label>
+          <label
+            >Title
+            <input
+              type="text"
+              name="title"
+              id="title"
+              pattern="[A-Za-z\s-]{7,}"
+              autocomplete="organization-title"
+              title="Enter you organization title"
+          /></label>
+          <label
+            >Email<span class="required">*</span>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              autocomplete="email"
+              placeholder="example@gmail.com"
+              title="Enter your email address"
+          /></label>
+          <label
+            >Phone<span class="required">*</span>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              autocomplete="tel"
+              title="Enter your mobile number"
+          /></label>
+          <label
+            >Business/Organization Name<span class="required">*</span>
+            <input
+              type="text"
+              required
+              name="business"
+              autocomplete="organization"
+              title="Enter your business/organization name"
+          /></label>
+          <label>
+            Membership Level<span class="required">*</span>
+            <select
+              name="membership"
+              id="membership"
+              autocomplete="off"
+              required
+            >
+              <option value="" selected disabled>
+                Select a membership level
+              </option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="bronze">Bronze</option>
+              <option value="np">Non Prophet</option>
+            </select>
+          </label>
+          <label
+            >Business Description:
+            <textarea
+              name="description"
+              id="description"
+              autocomplete="off"
+              title="Enter a description of your business/organization"
+              rows="5"
+            ></textarea>
+          </label>
+          <input type="hidden" name="timestamp" id="timestamp" />
+          <input type="submit" id="submit" value="Join" />
+        </form>
+      </main>
+      <aside class="card">
+        <h2>Membership Levels</h2>
+        <article id="item1">
+          <h3>Gold</h3>
+          <p>
+            Our premium level package for members offering great marketing
+            attention and spotlight.
+          </p>
+          <button data-membership-level="gold">Details</button>
+        </article>
+        <article id="item2">
+          <h3>Silver</h3>
+          <p>
+            Our mid-level package with great benefits and advertising for
+            members
+          </p>
+          <button data-membership-level="silver">Details</button>
+        </article>
+        <article id="item3">
+          <h3>Bronze</h3>
+          <p>
+            Our entry-level package with great feature for members of our
+            chamber
+          </p>
+          <button data-membership-level="bronze">Details</button>
+        </article>
+        <article id="item4">
+          <h3>Non Profit</h3>
+          <p>
+            A great package for non-prophet organizations to participate in our
+            chamber
+          </p>
+          <button data-membership-level="np">Details</button>
+        </article>
+      </aside>
     </div>
     <footer>
       <div class="container">
@@ -228,17 +238,17 @@
       </div>
     </footer>
     <dialog>
-        <header>
-            <h2 id="modal-title"></h2>
-            <button id="close-modal">&times;</button>
-        </header>
-        <div>
-          <h3>Description</h3>
-          <br>
-          <p id="modal-description"></p>
-          <br>
-          <p><strong>Cost: </strong>$<span id="modal-cost"></span></p>
-        </div>
+      <header>
+        <h2 id="modal-title"></h2>
+        <button id="close-modal">&times;</button>
+      </header>
+      <div>
+        <h3>Description</h3>
+        <br />
+        <p id="modal-description"></p>
+        <br />
+        <p><strong>Cost: </strong>$<span id="modal-cost"></span></p>
+      </div>
     </dialog>
   </body>
 </html>

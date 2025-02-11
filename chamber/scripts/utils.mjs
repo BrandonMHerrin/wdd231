@@ -1,4 +1,9 @@
 const utils = {
+    /**
+     * 
+     * @param {string} query 
+     * @returns {HTMLElement}
+     */
     qs: function(query) {
         return document.querySelector(query);
     },

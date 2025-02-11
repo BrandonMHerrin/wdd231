@@ -1,0 +1,94 @@
+.visitation-message {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+article {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .8);
+    padding: 1rem;
+}
+
+.card-content {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "figure"
+        "description"
+        "address"
+        "button";
+}
+
+article h2 {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .5rem;
+}
+
+.card-content figure {
+    text-align: center;
+    grid-area: figure;
+}
+
+figure img {
+    height: 200px;
+    width: auto;
+}
+
+.card-content .description {
+    grid-area: description;
+}
+
+.card-content address {
+    grid-area: address;
+}
+
+.card-content .button-container {
+    grid-area: button;
+}
+
+article a {
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--black);
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    33% {
+        transform: rotate(5deg);
+    }
+    66% {
+        transform: rotate(-5deg);
+    }
+}
+
+@media screen AND (min-width: 641px) {
+    .card-content {
+        grid-template-areas: 
+            "figure description"
+            "figure address"
+            "figure button";
+    }
+    
+    figure img:hover {
+        animation: rotate 500ms forwards;
+    }
+}
+
+@media screen AND (min-width: 1025px) {
+    .card-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .visitation-message {
+        grid-column: span 2;
+    }
+}
