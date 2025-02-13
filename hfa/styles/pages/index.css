@@ -1,0 +1,51 @@
+@import url('../main.css');
+
+main {
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jumbotron {
+    max-width: 960px;
+    width: 100%;
+    height: auto;
+}
+
+.call-to-action {
+    position: absolute;
+    background-color: var(--primary);
+    padding: 1rem;
+    color: var(--secondary);
+    border: 3px solid var(--accent);
+    border-radius: 1rem;
+    opacity: .8;
+    display: grid;
+    gap: 1rem;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.call-to-action p {
+    font-size: 1.3rem;
+}
+
+.call-to-action a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: var(--secondary);
+    border: 3px solid var(--accent);
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+@media screen AND (min-width: 641px) {
+    .call-to-action {
+        top: 20%;
+        left: 20%;
+        transform: translateX(0);
+    }
+}
