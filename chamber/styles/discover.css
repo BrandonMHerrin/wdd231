@@ -65,15 +65,6 @@ article a {
     display: inline-block;
 }
 
-@keyframes rotate {
-    33% {
-        transform: rotate(5deg);
-    }
-    66% {
-        transform: rotate(-5deg);
-    }
-}
-
 @media screen AND (min-width: 641px) {
     .card-content {
         grid-template-areas: 
