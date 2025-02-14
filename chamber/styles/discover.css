@@ -83,7 +83,8 @@ article a {
     }
     
     figure img:hover {
-        animation: rotate 500ms forwards;
+        box-shadow: 0 4px 12px var(--black);
+        transition: box-shadow 500ms;
     }
 }
 
