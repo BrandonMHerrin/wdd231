@@ -1,5 +1,5 @@
-import WeatherModule from "./weather.mjs";
-import MemberSpotlight from "./member-spotlight.mjs";
+import WeatherModule from "./weather.js";
+import MemberSpotlight from "./member-spotlight.js";
 
 class IndexPage {
     constructor() {

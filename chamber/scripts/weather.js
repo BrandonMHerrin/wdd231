@@ -1,9 +1,8 @@
-import utils from "./utils.mjs";
+import utils from "./utils.js";
 
 class WeatherModule {
   constructor() {
-    this.baseUrl =
-      "https://api.openweathermap.org/data/2.5/";
+    this.baseUrl = "https://api.openweathermap.org/data/2.5/";
   }
   async renderWeather() {
     try {
@@ -15,8 +14,8 @@ class WeatherModule {
   }
   async updateCurrentWeatherCard() {
     const currentWeather = await this.loadCurrentWeather();
-    utils.qs('.weather .temp').textContent = currentWeather.current;
-    utils.qs('.weather .conditions').textContent = currentWeather.description;
+    utils.qs(".weather .temp").textContent = currentWeather.current;
+    utils.qs(".weather .conditions").textContent = currentWeather.description;
   }
   async updateForecastCard() {
     const forecasts = await this.loadForcast();
@@ -26,12 +25,12 @@ class WeatherModule {
     const todaysForecast = forecasts[0];
     const tomorrowsForecast = forecasts[1];
     const dayAfterForecast = forecasts[2];
-    utils.qs('.today .temp').textContent = todaysForecast.high;
-    utils.qs('.tomorrow .forecast-date').textContent = tomorrowsForecast.date;
-    utils.qs('.tomorrow .temp').textContent = tomorrowsForecast.high;
-    utils.qs('.day-after .forecast-date').textContent = dayAfterForecast.date;
-    utils.qs('.day-after .temp').textContent = dayAfterForecast.high;
-  } 
+    utils.qs(".today .temp").textContent = todaysForecast.high;
+    utils.qs(".tomorrow .forecast-date").textContent = tomorrowsForecast.date;
+    utils.qs(".tomorrow .temp").textContent = tomorrowsForecast.high;
+    utils.qs(".day-after .forecast-date").textContent = dayAfterForecast.date;
+    utils.qs(".day-after .temp").textContent = dayAfterForecast.high;
+  }
   async loadCurrentWeather() {
     const url =
       this.baseUrl +
@@ -60,22 +59,22 @@ class WeatherModule {
   parseForecast(data) {
     const forecasts = {};
     data.forEach((forecast) => {
-        const date = new Date(forecast.dt * 1000);
-        const day = date.toISOString().split('T')[0];
+      const date = new Date(forecast.dt * 1000);
+      const day = date.toISOString().split("T")[0];
 
-        if (!forecasts[day]) {
-            forecasts[day] = {
-                date: utils.dateMapper(new Date(day).getDay()),
-                high: Math.round(forecast.main.temp)
-            };
-        } else {
-            const temp = forecast.main.temp;
-            if(forecasts[day].high < temp) {
-                forecasts[day].high = Math.round(temp);
-            }
+      if (!forecasts[day]) {
+        forecasts[day] = {
+          date: utils.dateMapper(new Date(day).getDay()),
+          high: Math.round(forecast.main.temp),
+        };
+      } else {
+        const temp = forecast.main.temp;
+        if (forecasts[day].high < temp) {
+          forecasts[day].high = Math.round(temp);
         }
+      }
     });
-    return Object.values(forecasts).slice(0,3);
+    return Object.values(forecasts).slice(0, 3);
   }
 }
 

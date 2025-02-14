@@ -1,4 +1,4 @@
-import utils from "./utils.mjs";
+import utils from "./utils.js";
 
 class FooterModule {
     constructor() {
