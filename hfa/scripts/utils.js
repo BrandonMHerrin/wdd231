@@ -12,7 +12,13 @@ const utils = {
      * @returns {string}
      */
     currentPage: function() {
-        return window.location.pathname.slice(1);
+        let pageName;
+        const pathArray = window.location.pathname.split("/");
+        pageName = pathArray[pathArray.length - 1]
+        if (!pageName) {
+            pageName = "index.html"
+        }
+        return pageName;
     }
 };
 
