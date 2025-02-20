@@ -1,1 +1,78 @@
-@import url('../main.css')
+@import url('../main.css');
+
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    border-bottom: 5px solid var(--accent);
+}
+
+.post-items {
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.post-item {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+article {
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+    cursor: pointer;
+    grid-template-areas: 
+        "title"
+        "img"
+        "description"
+}
+
+.item-title {
+    grid-area: title;
+}
+
+.item-description {
+    grid-area: description;
+}
+
+.item-img {
+    grid-area: img;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 1rem;
+    display: block;
+    border: 1px solid var(--black);
+}
+
+@media screen AND (min-width: 641px) {
+    article {
+        grid-template-areas: 
+            "title title"
+            "img description";
+
+        font-size: 1.25rem;
+    }
+
+}
+
+@media screen AND (min-width: 961px) {
+    .post-items {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    article:hover {
+        border: 3px solid var(--accent);
+        transition: border 500ms;
+    }
+}

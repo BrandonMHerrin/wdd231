@@ -1,5 +1,5 @@
-import Footer from "./components/footer.mjs";
-import Header from "./components/header.mjs";
+import Footer from "./components/footer.js";
+import Header from "./components/header.js";
 
 function initializeCoreComponents() {
     new Footer();

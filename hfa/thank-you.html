@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herrin Family Adventures | Posts</title>
-    <meta name="description" content="Page displaying recent posts for Herrin Family Adventures. This blog
-    details the adventures of the Herrin family as they enjoy time with family and friends while travel 
-    around the world and enjoy time at home.">
+    <title>Herrin Family Adventures | Thank You</title>
+    <meta name="description" content="Thank you page for subscribing to ">
     <meta name="author" content="Brandon Melving Herrin">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/pages/posts.css">
-    <script src="scripts/pages/posts.js" type="module"></script>
+    <link rel="stylesheet" href="styles/pages/subscribe.css">
+    <script src="scripts/pages/thank-you.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -31,16 +30,25 @@
         <div class="nav-container">
             <nav>
                 <a href="index.html">Home</a>
-                <a href="posts.html" class="current-page">Posts</a>
+                <a href="posts.html">Posts</a>
                 <a href="subscribe.html">Subscribe</a>
             </nav>
         </div>
-
     </header>
     <main>
-        <h1>Posts</h1>
-        <section class="post-items">
-        </section>
+        <article class="main">
+            <h1>Thank You</h1>
+            <p>
+                Thank you for your subscription! Stay tuned for more
+                 great content.
+
+            </p>
+            <form method="get" action="thank-you.html">
+                <label>First Name<input type="text" id="first" name="first" autocomplete="given-name" disabled></label>
+                <label>Last Name<input type="text" id="last" name="last" autocomplete="family-name" disabled></label>
+                <label>Email<input type="email" id="email" name="email" autocomplete="email" disabled></label>
+            </form>
+        </article>
     </main>
     <footer>
         <div class="main-content">

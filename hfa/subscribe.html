@@ -10,8 +10,8 @@
     around the world and enjoy time at home.">
     <meta name="author" content="Brandon Melving Herrin">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/pages/index.css">
-    <script src="scripts/pages/index.js" type="module"></script>
+    <link rel="stylesheet" href="styles/pages/subscribe.css">
+    <script src="scripts/pages/subscribe.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -39,7 +39,15 @@
 
     </header>
     <main>
-        <h2>Subscribe</h2>
+        <article class="main">
+            <h1>Subscribe</h1>
+            <form method="get" action="thank-you.html">
+                <label>First Name<input type="text" id="first" name="first" required autocomplete="given-name"></label>
+                <label>Last Name<input type="text" id="last" name="last" required autocomplete="family-name"></label>
+                <label>Email<input type="email" id="email" name="email" required autocomplete="email"></label>
+                <input type="submit" value="Subscribe" id="submit">
+            </form>
+        </article>
     </main>
     <footer>
         <div class="main-content">

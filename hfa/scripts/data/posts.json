@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Subic Bay Ocean Adventure",
+        "description": "Find out more about our wonderful trip to the Subic Bay Ocean Adventure Park. It was awesome, there were dolphins!",
+        "thumbnailUrl": "images/posts/subic3dwhale.webp",
+        "postUrl": "subic.html"
+    },
+    {
+        "title": "Prince and Princess Parade",
+        "description": "The twins were asked to participate the prince and princess parade. It was so much fun!",
+        "thumbnailUrl": "images/posts/royalty-parade.webp",
+        "postUrl": "parade.html"
+    }
+]

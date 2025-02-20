@@ -13,7 +13,10 @@ class Header {
   }
   #setCurrentPageClass() {
     const currentPage = utils.currentPage();
-    utils.qs(`.large-nav a[href="${currentPage}"]`).classList.add('current-page');
+    const currentAnchor = utils
+      .qs(`.large-nav a[href="${currentPage}"]`);
+    if(currentAnchor)
+      currentAnchor.classList.add("current-page");
   }
 }
 

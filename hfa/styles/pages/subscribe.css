@@ -1,1 +1,40 @@
-@import url('../main.css')
+@import url('../main.css');
+
+article.main {
+    margin: 1rem 1rem 0;
+    max-width: 640px;
+}
+
+article h1 {
+    font-size: 2rem;
+    border-bottom: 5px solid var(--accent);
+    margin: 0   ;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+}
+
+form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+input {
+    padding: .5rem;
+}
+
+#submit {
+    color: var(--primary);
+    background-color: var(--white);
+    border: 3px solid var(--accent);
+    border-radius: 1rem;
+}
+
+@media screen AND (min-width: 640px) {
+    article.main {
+        margin: 1rem auto 0;
+    }
+}
